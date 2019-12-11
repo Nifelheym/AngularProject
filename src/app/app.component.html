@@ -1,0 +1,20 @@
+<div class="search">
+    <input type="text" [(ngModel)]="searchObj" name="search">
+    <label for="search"><button (click)="startSearch()">поиск по таблицe</button></label>
+</div>
+<div class="head-of-teble">
+  <span (click)="sortByName()">
+      Имя пользователя
+  </span>
+  <span (click)="sortByCity()">
+      Название города
+  </span>
+  <span (click)="sortByPost()">
+      Название публикации
+  </span>
+  <span>
+      Количество комментариев
+  </span>
+</div>
+<hr>
+  <app-posts *ngFor="let user of resultInfoUsers let indx = index;" [userItem]="user" [indexIter] = "indx"></app-posts>

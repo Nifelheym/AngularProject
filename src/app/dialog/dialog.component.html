@@ -1,0 +1,8 @@
+<dialog>
+        <h4>Заголовок поста: {{text}}</h4>
+        <hr>
+        <h5>Комментарии к посту:</h5>
+        <p *ngFor="let comment of comments">
+            {{comment.name}}
+        </p>
+</dialog>

@@ -1,0 +1,8 @@
+
+<div>
+    <span>{{user.user[0].name}}</span>
+    <span>{{user.user[0].address.city}}</span>
+    <span class="title-post" (click)="textToDialo(user)">{{user.title}}</span>
+    <app-comments [postItem]="user"></app-comments>
+</div>
+<app-dialog [textOfPost]="textOfPost" [comments]="comments"></app-dialog>

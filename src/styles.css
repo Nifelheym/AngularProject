@@ -1,0 +1,51 @@
+
+@font-face {
+    font-family: 'Circe';
+    src: url('/src/assets/fonts/Circe-Regular.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('/src/assets/fonts/Circe-Bold.eot');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin-top: 2em;
+    font-family: Circe, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+
+app-root {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog {
+    text-align: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 1em black;
+    width: 60%;
+}
+
+/* native backdrop */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* polyfill backdrop */
+dialog + .backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
